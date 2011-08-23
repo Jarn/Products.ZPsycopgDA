@@ -23,9 +23,15 @@ __version__ = '2.0'
 import DA
 
 def initialize(context):
+    import Products.ZSQLMethods
+    import os.path
+    path = Products.ZSQLMethods.__path__[0].split('/')[:-2]
+    path = '/'.join(path)
+    icon = os.path.join(path, 'Shared', 'DC', 'ZRDB', 'www', 'DBAdapterFolder_icon.gif') 
+
     context.registerClass(
         DA.Connection,
         permission = 'Add Z Psycopg 2 Database Connections',
         constructors = (DA.manage_addZPsycopgConnectionForm,
                         DA.manage_addZPsycopgConnection),
-        icon = SOFTWARE_HOME + '/Shared/DC/ZRDB/www/DBAdapterFolder_icon.gif')
+                        icon=icon)

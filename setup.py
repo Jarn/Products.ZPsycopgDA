@@ -37,5 +37,6 @@ setup(name='Products.ZPsycopgDA',
       install_requires=[
           'setuptools',
           'psycopg2',
+          'Products.ZSQLMethods'
       ],
       )

@@ -195,8 +195,13 @@ __ac_permissions__ = (
      ('manage_addZPsycopgConnectionForm', 'manage_addZPsycopgConnection')),)
 
 # add icons
+import Products.ZSQLMethods
+import os.path
+path = Products.ZSQLMethods.__path__[0].split('/')[:-2]
+path = '/'.join(path)
+icon = os.path.join(path, 'Shared', 'DC', 'ZRDB', 'www', 'DBAdapterFolder_icon.gif') 
 
-misc_={'conn': ImageFile('Shared/DC/ZRDB/www/DBAdapterFolder_icon.gif')}
+misc_={'conn': ImageFile(icon)}
 
 for icon in ('table', 'view', 'stable', 'what', 'field', 'text', 'bin',
              'int', 'float', 'date', 'time', 'datetime'):
