@@ -19,7 +19,7 @@ Operating System :: Unix
 """
 
 setup(name='Products.ZPsycopgDA',
-      version='2.0.13-enfold',
+      version='2.0.13-jarn1',
       description='Python-PostgreSQL Zope Database Adapter.',
       classifiers=filter(None, classifiers.split("\n")),
       maintainer="Federico Di Gregorio",
